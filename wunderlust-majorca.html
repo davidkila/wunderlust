@@ -36,7 +36,7 @@
         <a id="skip" href="#main-content">Skip to Main Content</a>
         <!-- styling skip links: https://webaim.org/techniques/css/invisiblecontent/ -->
         <header>
-            <nav>
+            <nav id="navigation">
                 <div id="menu-toggle">
                     <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
                     <h2 class="sr-only">Main Navigation</h2>
@@ -53,40 +53,35 @@
                     </ul>
                 </div>
             </nav>
-            <div id="preface-2">
-                <div id="preface">
-                    <a href="index.html" id="logo"><img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun"></a>
-                  <p id="menu-block">Menu</p>
-                </div>
-
+            <div id="preface">
+                <a href="index.html" id="logo"><img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun"></a>
+                <ul>
+                <li id="menu-block"><a href="#">Menu<a/></li>
+                </ul>
+            </div>
                 <div id="welcome">
-                   <h1 id="wunderlust">Wunderlust</h1>
-                   <p id="let-wunderlust">Let Wunderlust Travel help you plan the trip of your dreams!</p>			
+                    <h1 id="wunderlust">Wunderlust</h1>
+                    <p id="let-wunderlust">Let Wunderlust Travel help you plan the trip of your dreams!</p>			
                 </div>
-
             </div>
             </header>
         <main id="main-content">
             <article>
-                <div id="intro"> 
-
-                    <div id="majorca">
-                        <h2>Majorca</h2>
-                        <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
-                    </div>
-
+                <div id="intro">  
+                  <div id="majorca">
+                    <h2>Majorca</h2>
+                    <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
+                  </div>
                     <div id="img-grid">
-
-                       <div id="waves-and-beach">
-                          <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff">
-                         <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach">
+                      <div id="waves-and-beach">
+                        <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff">
+                        <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach">
                       </div>
-
-                    <picture>
-                        <source srcset="images/majorca-cove-small.png"
-                            media="(max-width: 500px)">
-                        <img id="marjorca-cove" src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground">
-                    </picture>
+                        <picture>
+                            <source srcset="images/majorca-cove-small.png"
+                                media="(max-width: 500px)">
+                            <img id="marjorca-cove" src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground">
+                        </picture>
                     </div>
                 </div>  
                 <section id="plan">
@@ -116,7 +111,7 @@
                                 <img src="images/eat.svg" alt="fork and spoon icon">                         
                             </a>
                         </section>
-                    </div> 
+                    </div>   
                 </section>
                 <section id="testimonials">
                     <h3>Testimonials</h3>
@@ -176,15 +171,13 @@
                     <div id="section-1">
                       <h3>Contact Us <span class="form-required">* required</span></h3>
                       <form method="post" action="https://wp.zybooks.com/form-viewer.php">
-                          
-                        <div id="names">
+                          <div id="names">
                               <label for="fName">First Name<span class="required">*</span></label>
                               <input type="text" name="fName" id="fName" autocomplete="given-name" placeholder="First Name" required>
                               <!-- custom input styles from https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ -->
                               <label for="lName">Last Name<span class="required">*</span></label>
                               <input type="text" name="lName" id="lName" autocomplete="family-name" placeholder="Last Name" required>
-                         
-                         </div>
+                          </div>
                     </div>
                         <div id="nums">
                             <fieldset>
@@ -192,22 +185,22 @@
                                 <!-- custom radio button styles from https://moderncss.dev/pure-css-custom-styled-radio-buttons/ -->
                                 <div id="radio-buttons">
                                     <input type="radio" name="contactPref" id="prefEmail" required checked>
-                                    <label id="radio-email-label" class="radio-label">Email</label>
+                                    <label class="radio-label">Email</label>
 
                                     <input type="radio" name="contactPref" id="prefText">
-                                    <label id="radio-text-label" class="radio-label">Text</label>
+                                    <label class="radio-label">Text</label>
 
                                     <input type="radio" name="contactPref" id="prefPhone">
-                                    <label id="radio-phone-label" class="radio-label">Phone</label>
+                                    <label class="radio-label">Phone</label>
                                 </div>
                             </fieldset>
-                            <label id="input-email-label" for="email">Email Address<span class="required">*</span></label>
+                            <label id="radio-email-label" for="email">Email Address<span class="required">*</span></label>
                             <input type="email" name="email" id="email" autocomplete="email" placeholder="Email Address" required>
-                            <label id="input-phone-label" for="phone">Phone Number<span class="required">*</span></label>
+                            <label id="radio-phone-label" for="phone">Phone Number<span class="required">*</span></label>
                             <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Phone Number" required>
                         </div>
                         <div id="section-3">
-                            <div id="selects">
+                        <div id="selects">
                             <!-- custom select styles from: https://moderncss.dev/custom-select-styles-with-pure-css/ -->
                             <label for="destination">Destination<span class="required">*</span></label>
                             <div class="custom-select">
@@ -237,9 +230,9 @@
                                 <span class="focus"></span>
                             </div> 
                             <input type="submit" name="mySubmit" id="mySubmit" value="Submit">
-                        </form>
-                    </div>
                         </div>
+                       </div>
+                    </form>
                 </section>
             </article>
         </main>
@@ -249,4 +242,4 @@
             <a href="#">Terms of Service</a>
         </footer>
     </body>
-</html> 
+</html>
